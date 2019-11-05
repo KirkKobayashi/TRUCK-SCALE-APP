@@ -35,6 +35,7 @@ Partial Class frmDatabase
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtServer = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnClose = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.GB_Constring.SuspendLayout()
         Me.SuspendLayout()
@@ -62,6 +63,7 @@ Partial Class frmDatabase
         '
         'GB_Constring
         '
+        Me.GB_Constring.Controls.Add(Me.btnClose)
         Me.GB_Constring.Controls.Add(Me.btnClear)
         Me.GB_Constring.Controls.Add(Me.btnSave)
         Me.GB_Constring.Controls.Add(Me.txtDatabase)
@@ -74,7 +76,7 @@ Partial Class frmDatabase
         Me.GB_Constring.Controls.Add(Me.Label2)
         Me.GB_Constring.Location = New System.Drawing.Point(7, 68)
         Me.GB_Constring.Name = "GB_Constring"
-        Me.GB_Constring.Size = New System.Drawing.Size(432, 202)
+        Me.GB_Constring.Size = New System.Drawing.Size(432, 241)
         Me.GB_Constring.TabIndex = 1
         Me.GB_Constring.TabStop = False
         Me.GB_Constring.Text = "Connection Settings"
@@ -165,6 +167,15 @@ Partial Class frmDatabase
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Server"
         '
+        'btnClose
+        '
+        Me.btnClose.Location = New System.Drawing.Point(259, 196)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(106, 33)
+        Me.btnClose.TabIndex = 14
+        Me.btnClose.Text = "Exit"
+        Me.btnClose.UseVisualStyleBackColor = True
+        '
         'frmDatabase
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -199,4 +210,5 @@ Partial Class frmDatabase
     Friend WithEvents Label2 As Label
     Friend WithEvents btnClear As Button
     Friend WithEvents btnSave As Button
+    Friend WithEvents btnClose As Button
 End Class

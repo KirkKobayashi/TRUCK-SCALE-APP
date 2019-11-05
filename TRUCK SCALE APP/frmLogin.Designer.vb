@@ -36,50 +36,56 @@ Partial Class frmLogin
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 183)
+        Me.Label1.Location = New System.Drawing.Point(18, 253)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(71, 13)
+        Me.Label1.Size = New System.Drawing.Size(97, 18)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "USER NAME"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 211)
+        Me.Label2.Location = New System.Drawing.Point(18, 292)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(70, 13)
+        Me.Label2.Size = New System.Drawing.Size(96, 18)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "PASSWORD"
         '
         'txtUser
         '
-        Me.txtUser.Location = New System.Drawing.Point(93, 180)
+        Me.txtUser.Location = New System.Drawing.Point(140, 249)
+        Me.txtUser.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtUser.Name = "txtUser"
-        Me.txtUser.Size = New System.Drawing.Size(193, 20)
+        Me.txtUser.Size = New System.Drawing.Size(288, 24)
         Me.txtUser.TabIndex = 3
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(93, 208)
+        Me.txtPassword.Location = New System.Drawing.Point(140, 288)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(193, 20)
+        Me.txtPassword.Size = New System.Drawing.Size(288, 24)
         Me.txtPassword.TabIndex = 4
         Me.txtPassword.UseSystemPasswordChar = True
         '
         'cmdLogin
         '
-        Me.cmdLogin.Location = New System.Drawing.Point(93, 234)
+        Me.cmdLogin.Location = New System.Drawing.Point(140, 324)
+        Me.cmdLogin.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmdLogin.Name = "cmdLogin"
-        Me.cmdLogin.Size = New System.Drawing.Size(192, 33)
+        Me.cmdLogin.Size = New System.Drawing.Size(288, 46)
         Me.cmdLogin.TabIndex = 5
         Me.cmdLogin.Text = "Log In"
         Me.cmdLogin.UseVisualStyleBackColor = True
         '
         'cmdExit
         '
-        Me.cmdExit.Location = New System.Drawing.Point(94, 273)
+        Me.cmdExit.Location = New System.Drawing.Point(141, 378)
+        Me.cmdExit.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmdExit.Name = "cmdExit"
-        Me.cmdExit.Size = New System.Drawing.Size(192, 33)
+        Me.cmdExit.Size = New System.Drawing.Size(288, 46)
         Me.cmdExit.TabIndex = 6
         Me.cmdExit.Text = "Exit"
         Me.cmdExit.UseVisualStyleBackColor = True
@@ -87,18 +93,19 @@ Partial Class frmLogin
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(93, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(140, 17)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(200, 200)
+        Me.PictureBox1.Size = New System.Drawing.Size(300, 277)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
         'frmLogin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(355, 326)
+        Me.ClientSize = New System.Drawing.Size(534, 464)
         Me.Controls.Add(Me.cmdExit)
         Me.Controls.Add(Me.cmdLogin)
         Me.Controls.Add(Me.txtPassword)
@@ -106,8 +113,10 @@ Partial Class frmLogin
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmLogin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "LogIn"

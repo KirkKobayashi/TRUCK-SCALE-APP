@@ -281,6 +281,7 @@ Public Class frmTrans
                 Return "----------"
             End If
         Catch ex As Exception
+            Return "--------"
             MsgBox("Read weight error" & vbCrLf & ex.Message)
         End Try
 
@@ -294,6 +295,7 @@ Public Class frmTrans
 
             GetTicket = SQL.DBDT.Rows(0)("ticketnumber") + 1
         Catch ex As Exception
+            GetTicket = 0
             MsgBox("Get Ticket error" & vbCrLf & ex.Message)
         End Try
 
@@ -310,7 +312,8 @@ Public Class frmTrans
         Dim crConnectionInfo As New ConnectionInfo
         Dim CrTables As Tables
         Dim CrTable As Table
-        Dim rpt As New Report
+        'Dim rpt As New Report
+        Dim rpt As New FrmReportView
         Dim filePath As String
 
         Try
@@ -330,6 +333,10 @@ Public Class frmTrans
                 crtableLogoninfo.ConnectionInfo = crConnectionInfo
                 CrTable.ApplyLogOnInfo(crtableLogoninfo)
             Next
+
+            'objReport.SetParameterValue("@transnum", txtTicket.Text)
+            ''objReport.PrintToPrinter(1, False, 0, 0)
+            'rpt.CrViewer.ReportSource = objReport
 
             objReport.SetParameterValue("@transnum", txtTicket.Text)
             'objReport.PrintToPrinter(1, False, 0, 0)

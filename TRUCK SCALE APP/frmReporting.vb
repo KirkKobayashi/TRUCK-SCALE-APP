@@ -27,7 +27,7 @@ Public Class frmReporting
         Dim crConnectionInfo As New ConnectionInfo
         Dim CrTables As Tables
         Dim CrTable As Table
-        Dim rpt As New Report
+        Dim rpt As New FrmReportView
         Dim filePath As String
 
         Dim SQL As New SqlControl

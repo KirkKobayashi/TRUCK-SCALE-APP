@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmMain
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmMain
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
@@ -45,6 +45,7 @@ Partial Class frmMain
         Me.btnClose = New System.Windows.Forms.Button()
         Me.buttonIndicator = New System.Windows.Forms.PictureBox()
         Me.BunifuDragControl1 = New Bunifu.Framework.UI.BunifuDragControl(Me.components)
+        Me.DoubleBitmapControl1 = New BunifuAnimatorNS.DoubleBitmapControl()
         Me.TitlePanel.SuspendLayout()
         Me.PanelTitle.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -137,6 +138,7 @@ Partial Class frmMain
         '
         'MainPanel
         '
+        Me.MainPanel.Controls.Add(Me.DoubleBitmapControl1)
         Me.MainPanel.Controls.Add(Me.s_strip)
         Me.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MainPanel.Location = New System.Drawing.Point(0, 58)
@@ -289,6 +291,15 @@ Partial Class frmMain
         Me.BunifuDragControl1.TargetControl = Me.PanelTitle
         Me.BunifuDragControl1.Vertical = True
         '
+        'DoubleBitmapControl1
+        '
+        Me.DoubleBitmapControl1.Location = New System.Drawing.Point(796, 540)
+        Me.DoubleBitmapControl1.Name = "DoubleBitmapControl1"
+        Me.DoubleBitmapControl1.Size = New System.Drawing.Size(75, 23)
+        Me.DoubleBitmapControl1.TabIndex = 1
+        Me.DoubleBitmapControl1.Text = "DoubleBitmapControl1"
+        Me.DoubleBitmapControl1.Visible = False
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -338,4 +349,5 @@ Partial Class frmMain
     Friend WithEvents btnReport As Button
     Friend WithEvents btnWeighing As Button
     Friend WithEvents lblUser As Label
+    Friend WithEvents DoubleBitmapControl1 As BunifuAnimatorNS.DoubleBitmapControl
 End Class

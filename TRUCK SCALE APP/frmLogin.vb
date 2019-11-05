@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub cmdLogin_Click(sender As Object, e As EventArgs) Handles cmdLogin.Click
-        Dim SQL As New SqlControl
+
         Dim isAdmin As Integer = 0
 
         If txtUser.Text = "" Then
@@ -18,13 +18,15 @@
         End If
 
         Try
+            Me.Cursor = Cursors.WaitCursor
+            Dim SQL As New SqlControl
             SQL.AddParams("@username", Trim(txtUser.Text))
+
             SQL.AddParams("@password", Encrypt(Trim(txtPassword.Text)))
+
             SQL.ExecQuery("SELECT * FROM WEIGHERS WHERE username = @username and password =@password")
 
             If SQL.RecordCount <> 0 Then
-
-
                 With frmMain
                     .userPanel.Visible = True
                     .lblWelcome.Text = "Welcome " & UCase(txtUser.Text)
@@ -33,12 +35,17 @@
                         .adminPanel.Visible = True
                     End If
                 End With
+                Me.Cursor = DefaultCursor
                 Me.Close()
             Else
+                Me.Cursor = DefaultCursor
                 MsgBox("Username or password are incorrect", MsgBoxStyle.Exclamation, "Log In Failed")
             End If
         Catch ex As Exception
+            Me.Cursor = DefaultCursor
             MsgBox(ex.Message)
+
+            frmDatabase.ShowDialog()
         End Try
     End Sub
 

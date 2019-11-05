@@ -86,17 +86,4 @@
         alignIndicators(btnDatabase)
     End Sub
 
-    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles Me.Load
-        Try
-            Dim sql As New SqlControl
-
-            sql.ExecQuery("Select * from tickettnumber")
-            If sql.HasException(True) Then Exit Sub
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-
-
-
-    End Sub
 End Class

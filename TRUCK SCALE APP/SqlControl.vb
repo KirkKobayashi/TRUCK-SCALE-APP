@@ -52,6 +52,7 @@ Public Class SqlControl
             DBDT = New DataTable
             DBDA = New SqlDataAdapter(DBCmd)
             RecordCount = DBDA.Fill(DBDT)
+            'Params.Clear()
 
         Catch ex As Exception
             'CAPTURE ERROR
@@ -165,8 +166,5 @@ Public Class SqlControl
 
         Return True
     End Function
-
-
-
 
 End Class
